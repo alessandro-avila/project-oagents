@@ -1,44 +1,52 @@
-> ⚠️ This project is still an experimentation phase and is not intended to be used in production yet.
+# Todo List Application 
 
-# AI Agents Framework
+Todo List Application is a productivity tool built with C# that equips users with the capabilities to create, manage, and track tasks or todo items. The application provides both mobile and web-based interfaces, thereby offering users access to their tasks from anywhere. It is deployed to Azure and aligns with the rules of the Well Architected Framework (WAF). 
 
-An opinionated .NET framework, that is built on top of Semantic Kernel and Orleans, which helps creating and hosting event-driven AI Agents.
+## Features
+1. **Task Management**: Users can add, edit, and delete tasks. 
+2. **Due Dates and Reminders**: Users can set due dates for tasks and create reminders.
+3. **Task Categorization**: Users can categorize tasks based on projects or priority.
+4. **Task Completion**: Users can mark tasks as complete once they're done.
+5. **Collaboration**: Users can share tasks with others or assign tasks to team members. 
+   
+## Architecture
 
-At the moment the library resides in `src/` only, but we plan to publish them as a Nuget Package in the future.
+The application's architecture adheres to Microsoft Azure's Well-Architected Framework and follows the provided architectural guidelines. 
 
-## Examples
+- **Scaling**: The application is designed for scaling to meet user demands efficiently. The application and the services it uses are stateless, enabling requests to be routed to any instance.
 
-We have created a few examples to help you get started with the framework and to explore its capabilities.
+- **Partitioning**: The workload of the application is partitioned to maximize use of each compute unit. This partitioning also allows the application to scale by adding instances of specific resources.
 
-- [GitHub Dev Team Sample](samples/gh-flow/README.md): Build an AI Developer Team using event-driven agents, that help you automate the requirements engineering, planning, and coding process on GitHub.
+- **Automated Operational Tasks**: Azure Functions is used to automate operational tasks thereby reducing manual interventions and risks, freeing up human capacity for further innovation.
+
+- **Language & SDK**: The application is developed in C# and primarily utilizes the .NET Azure SDKs for reliability, performance, and frequent feature updates. 
+
+- **Compute Option**: The compute option of the application has been evaluated based on the chosen programming language. 
+
+## Running the Application
+
+To run the application, follow the steps below:
+
+1. Clone the repository to your local machine
+2. Navigate to the directory of the cloned repository
+3. Run the application:
+
+```bash
+dotnet run
+```
+
+## Performance Efficiency
+
+This application is designed with performance efficiency in mind, one of the pillars of the Microsoft Azure Well-Architected Framework. The application is designed for scaling and partitioning the workload to provide maximum performance.
+
+## Security
+
+The application follows the security guidelines prescribed by the Microsoft Azure Well-Architected Framework, thereby ensuring that your data is secure and privacy is maintained.
 
 ## Contributing
 
-This project welcomes contributions and suggestions.  Most contributions require you to agree to a
-Contributor License Agreement (CLA) declaring that you have the right to, and actually do, grant us
-the rights to use your contribution. For details, visit <https://cla.opensource.microsoft.com>.
+Contributions are welcome. Please read the contribution guidelines to get started.
 
-When you submit a pull request, a CLA bot will automatically determine whether you need to provide
-a CLA and decorate the PR appropriately (e.g., status check, comment). Simply follow the instructions
-provided by the bot. You will only need to do this once across all repos using our CLA.
+## License
 
-This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/).
-For more information see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or
-contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.
-
-## Legal Notices
-
-Microsoft and any contributors grant you a license to the Microsoft documentation and other content
-in this repository under the [Creative Commons Attribution 4.0 International Public License](https://creativecommons.org/licenses/by/4.0/legalcode),
-see the [LICENSE](LICENSE) file, and grant you a license to any code in the repository under the [MIT License](https://opensource.org/licenses/MIT), see the
-[LICENSE-CODE](LICENSE-CODE) file.
-
-Microsoft, Windows, Microsoft Azure and/or other Microsoft products and services referenced in the documentation
-may be either trademarks or registered trademarks of Microsoft in the United States and/or other countries.
-The licenses for this project do not grant you rights to use any Microsoft names, logos, or trademarks.
-Microsoft's general trademark guidelines can be found at <http://go.microsoft.com/fwlink/?LinkID=254653>.
-
-Privacy information can be found at <https://privacy.microsoft.com/en-us/>
-
-Microsoft and any contributors reserve all other rights, whether under their respective copyrights, patents,
-or trademarks, whether by implication, estoppel or otherwise.
+The Todo List Application is open-source software licensed under the MIT license.
